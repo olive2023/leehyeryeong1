@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+<style>
+.grid-container{display:grid;
+grid-template-rows: 70px 200px 70px;
+grid-template-columns: repeat(3,1fr);
+/* 세로 3열 1:1크기로 */
+grid-gap:10px;
+/* grid-row-gap:;grid-column-gap:; 가로세로 모두 10갭 */
+
+}
+.grid-item{background: #0169FF; color:#fff;
+  display: flex; justify-content: center; align-items: center;
+}
+.header{grid-column: 1/-1; grid-row: 1/2;}
+/* grid-column-start:1; grid-column-end:4;랑 똑같은말.. 처음부터 끝까지 끝을 -1로 써도 됨 */
+/* grid-row-start:1; grid-column-end:2; */
+/* 경계선 번호 처음(1)부터 끝(-1)까지 영역을 차지해요 */
+.nav{grid-column: 1/2; grid-row: 2/3;}
+.main{grid-column: 2/3; grid-row: 2/3;}
+.aside{grid-column: 3/4; grid-row: 2/3;}
+.footer{grid-column: 1/-1; grid-row: 3/4;}
+
+
+
+
+
+</style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item header">Header</div>
+    <div class="grid-item nav">Nav</div>
+    <div class="grid-item main">Main</div>
+    <div class="grid-item aside">Aside</div>
+    <div class="grid-item footer">Footer</div>
+  </div>
+
+
+
+
+
+
+
+</body>
+</html>
